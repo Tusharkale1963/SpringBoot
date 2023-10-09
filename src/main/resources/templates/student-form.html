@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Information</title>
+</head>
+<body>
+    <h2>Student Information</h2>
+    <form th:action="@{/page}" method="post" th:object="${student-form}">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" th:field="*{name}" required>
+        </div>
+        <div>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" th:field="*{address}" required>
+        </div>
+        <div>
+            <label for="std">Standard:</label>
+            <input type="text" id="std" name="std" th:field="*{std}" required>
+        </div>
+        <div>
+            <label for="schoolName">School Name:</label>
+            <input type="text" id="schoolName" name="schoolName" th:field="*{schoolName}" required>
+        </div>
+        <div>
+            <label for="mobileNum">Mobile Number:</label>
+            <input type="text" id="mobileNum" name="mobileNum" th:field="*{mobileNum}" required>
+        </div>
+
+        <!-- Marks Information -->
+        <h2>Marks Information</h2>
+        <div>
+            <label for="marks">Marks:</label>
+            <input type="text" id="marks" name="marksheet.marks" th:field="*{marksheet.marks}" required>
+        </div>
+        <div>
+            <label for="grade">Grade:</label>
+            <input type="text" id="grade" name="marksheet.grade" th:field="*{marksheet.grade}" required>
+        </div>
+
+        <div>
+            <button type="submit">Save</button>
+        </div>
+    </form>
+</body>
+</html>
